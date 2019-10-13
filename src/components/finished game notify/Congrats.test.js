@@ -1,11 +1,8 @@
 import React from "react";
-import Enzyme, { shallow } from "enzyme";
-import EnzymeReactAdapter from "enzyme-adapter-react-16";
+import { shallow } from "enzyme";
 import Congrats from "./Congrats.component";
 
 
-//necessary config to work with enzyme
-Enzyme.configure({ adapter: new EnzymeReactAdapter() });
 
 // for reusability declared outside of test tests
 /**
