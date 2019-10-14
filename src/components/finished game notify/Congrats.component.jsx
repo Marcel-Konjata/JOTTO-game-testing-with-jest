@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Alert } from "reactstrap";
 /**
  * React func component for ending game notification
  * @function
@@ -9,7 +10,14 @@ import PropTypes from "prop-types";
 
 const Congrats = ({ succes = false }) => {
     return (
-        <div>{succes ? <h2 id="succes-message">CONGRATS DUDE</h2> : null}</div>
+        <div>
+            {succes ? (
+                <Alert color="success">
+                    <h4>You did it!</h4>
+                    <span id="succes-message">Grats dude, you guessed correct word!</span>
+                </Alert>
+            ) : null}
+        </div>
     );
 };
 
