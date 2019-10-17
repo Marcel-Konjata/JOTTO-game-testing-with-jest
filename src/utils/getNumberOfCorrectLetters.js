@@ -9,7 +9,7 @@
  export const getNumberOfCorrectLetters = (guessedWord, generatedWord) => {
     const guessedLettersSet = new Set([...guessedWord]);
     const numberOfCorrectLetters = [...guessedLettersSet].filter(letter=> generatedWord.includes(letter));
-    return numberOfCorrectLetters.length;
+    return numberOfCorrectLetters.length  ;
 }
 
 

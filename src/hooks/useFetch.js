@@ -7,15 +7,15 @@ export function useFetch() {
     React.useEffect(() => {
         (async () => {
             try {
-                const response = await fetchRandomWord();
-                const resolve = response.data;
-                setData(resolve);
+                const resolve = await fetchRandomWord();
+                let result = resolve.toString()
+                setData(result);
             } catch (error) {
                 console.log(error);
                 setError(error);
             }
         })();
-    });
+    },[]);
 
-    return { data, error };
+    return { secretWord: data, fetchError: error };
 }
